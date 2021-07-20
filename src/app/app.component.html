@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-tab-group>
+    <mat-tab *ngFor="let tab of tabs;let index = index;"
+      [label]="tab.label">
+      <formly-form
+        [form]="form.at(index)"
+        [model]="model"
+        [fields]="tab.fields"
+        [options]="options[index]">
+      </formly-form>
+    </mat-tab>
+    <mat-tab label="Submit">
+      <div>
+        <button mat-raised-button class="btn btn-primary" [disabled]="!form.valid" type="submit">Submit</button>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</form>
+
+<pre>{{model|json}}</pre>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
