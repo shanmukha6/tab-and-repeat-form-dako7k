@@ -1,6 +1,9 @@
 @import '~bootstrap/scss/bootstrap.scss';
-body { padding: 10px; }
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; 
+body {
+  padding: 10px;
+}
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
